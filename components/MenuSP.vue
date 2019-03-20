@@ -2,35 +2,20 @@
   transition-group(name='fade')
     div.menu__bg(
       key='bg'
-      v-if='isOpenedMenu'
-      @click='closeMenu'
+      v-if='$store.state.main.isOpenedMenu'
+      @click='$store.commit["main/closeMenu"]'
     )
     div.menu__box(
-      v-if='isOpenedMenu'
+      v-if='$store.state.main.isOpenedMenu'
       key='box'
     )
-      nuxt-link.menu__link(to="/about" @click.native='closeMenu') about
-      nuxt-link.menu__link(to="/" @click.native='closeMenu') contact
-      nuxt-link.menu__link(to="/" @click.native='closeMenu') 
-      nuxt-link.menu__link(to="/" @click.native='closeMenu') 
+      nuxt-link.menu__link(to="/about" @click.native='$store.commit["main/closeMenu"]') about
+      nuxt-link.menu__link(to="/" @click.native='$store.commit["main/closeMenu"]') contact
+      nuxt-link.menu__link(to="/" @click.native='$store.commit["main/closeMenu"]') 
+      nuxt-link.menu__link(to="/" @click.native='$store.commit["main/closeMenu"]') 
 
 </template>
 
-<script>
-import {mapState, mapMutations} from 'vuex'
-export default {
-  computed: {
-    ...mapState([
-      'isOpenedMenu'
-    ])
-  },
-  methods: {
-    ...mapMutations([
-      'closeMenu'
-    ])
-  }
-}
-</script>
 
 <style lang="stylus" scoped>
 .menu__bg

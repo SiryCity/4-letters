@@ -1,7 +1,7 @@
 <template lang='pug'>
   div.cell(:class=`{
       "cell--next-month":
-        day.get("date") <= (6 - dayOfEndOfMonth)
+        day.get("date") <= (6 - $store.getters["main/dayOfEndOfMonth"])
         && day.get("date") < today.get("date")
     }`)
     div.cell__background {{day.get('date')}}
@@ -10,36 +10,22 @@
       :class=`{
         "cell--today": day.get("date") === today.get("date")
       }`
-      @input='updateText({$event, day})'
-      @keydown='deleteText({$event, day})'
+      @input='$store.commit("main/updateText", {$event, day})'
+      @keydown='$store.commit("main/deleteText", {$event, day})'
     )
     part-of-string(
-      v-if='schedulesDict[day.format("l")]'
-      v-for='(string, i) in schedulesDict[day.format("l")]'
+      v-if='$store.getters["main/schedulesDict"][day.format("l")]'
+      v-for='(string, i) in $store.getters["main/schedulesDict"][day.format("l")]'
       :key='"string" + day.format("l") + i'
       :string='string'
     )
 </template>
 
 <script>
-import {mapGetters, mapMutations} from 'vuex'
 import PartOfString from '~/components/PartOfString.vue'
 export default {
   components: {
     PartOfString,
-  },
-  computed: {
-    ...mapGetters([
-      'dayOfWeek',
-      'schedulesDict',
-      'dayOfEndOfMonth',
-    ])
-  },
-  methods: {
-    ...mapMutations([
-      'updateText',
-      'deleteText',
-    ])
   },
   props: {
     'day': Object,

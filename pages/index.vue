@@ -4,21 +4,20 @@
     section#calendar__wrapper
       div#calendar
         empty-date-box(
-          v-if='dayOfWeek'
-          v-for='(_, i) in Array(dayOfWeek)'
+          v-if='$store.getters["main/dayOfWeek"]'
+          v-for='(_, i) in Array($store.getters["main/dayOfWeek"])'
           :key='"empty-date" + i'
         )
         date-box(
-          v-for='(day, i) in days'
+          v-for='(day, i) in $store.getters["main/days"]'
           :key='"date" + i'
           :day='day'
-          :today='days[0]'
+          :today='$store.getters["main/days"]'
         )
     div.ad
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
 import DateBox from '~/components/DateBox.vue'
 import EmptyDateBox from '~/components/EmptyDateBox.vue'
 
@@ -27,14 +26,8 @@ export default {
     DateBox,
     EmptyDateBox,
   },
-  computed: {
-    ...mapGetters([
-      'days',
-      'dayOfWeek',
-    ])
-  },
   created(){
-    this.$store.commit('refreshSchedulesInitially')
+    this.$store.commit['main/refreshSchedulesInitially']
   }
 }
 </script>

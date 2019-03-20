@@ -15,15 +15,8 @@ export default {
     MenuSP,
   },
   mounted(){
-    this.$store.commit(
-      'setStatic100vh',
-      this.$store.getters.isSP
-    )
-
-    this.$store.commit(
-      'resizeCalendar',
-      this.$store.getters.isSP
-    )
+    this.$store.commit['main/setStatic100vh']
+    this.$store.commit['main/resizeCalendar']
   },
 }
 </script>
