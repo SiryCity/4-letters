@@ -1,39 +1,40 @@
+import moment from 'moment'
+
 export const state = () =>
   ({
     schedules: [],
     isOpenedMenu: false
   })
 
-export const getters = () =>
-  ({
+export const getters = {
     //スマートフォンか
     isSP: () =>
       /iPhone|iPod|iPad|Android/i.test(navigator.userAgent),
 
-  //カレンダーのセルの数ぶんの配列
-  days: () =>
-    Array(28).fill().map((_, i) =>
-      moment().add(i, 'days')
-    ),
+    //カレンダーのセルの数ぶんの配列
+    days: () =>
+      Array(28).fill().map((_, i) =>
+        moment().add(i, 'days')
+      ),
 
-  //今日の曜日
-  dayOfWeek: () => moment().day(),
+    //今日の曜日
+    dayOfWeek: () => moment().day(),
 
-  //スケジュールの読み込み
-  schedulesDict: state =>
-    state.schedules.reduce((pre, cur) =>
-      ({
-        ... pre || [],
-        [cur.day]: cur.text.split('')
-      })
-    ,{}),
+    //スケジュールの読み込み
+    schedulesDict: state =>
+      state.schedules.reduce((pre, cur) =>
+        ({
+          ... pre || [],
+          [cur.day]: cur.text.split('')
+        })
+      ,{}),
 
-  //月末が何曜日か
-  dayOfEndOfMonth: () =>
-    moment().endOf('month').get('day')
-  })
+    //月末が何曜日か
+    dayOfEndOfMonth: () =>
+      moment().endOf('month').get('day')
+}
 
-export const mutation = {
+export const mutations = {
 
   //メニューを開く
   openMenu(state){
@@ -100,6 +101,7 @@ export const mutation = {
   setStatic100vh(){
     /iPhone|iPod|iPad|Android/i.test(navigator.userAgent)
     && document.documentElement.style.setProperty(
+      '--static100vh',
       `${window.outerHeight}px`
     )
   },
@@ -107,6 +109,7 @@ export const mutation = {
 
   //カレンダーのリサイズ
   resizeCalendar(){
+    
 
     const HEADER_HEIGHT = 80
     const AD_HEIGHT = 80

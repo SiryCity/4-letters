@@ -3,7 +3,7 @@
     nuxt-link#header__title(to="/")
       img#title__logo(alt='四文字予定' src='~/assets/favicon.svg')
       h1#title__h1 四文字予定   
-    nav#header__menu--sp(v-if='$store.getters["main/isSP"]' @click='$store.commit["main/openMenu"]')
+    nav#header__menu--sp(v-if='$store.getters["main/isSP"]' @click='$store.commit("main/openMenu")')
       img.menu__logo--sp(
         alt='メニュー'
         src='~/assets/menu.svg'

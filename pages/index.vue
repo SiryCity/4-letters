@@ -27,7 +27,7 @@ export default {
     EmptyDateBox,
   },
   created(){
-    this.$store.commit['main/refreshSchedulesInitially']
+    this.$store.commit('main/refreshSchedulesInitially')
   }
 }
 </script>
