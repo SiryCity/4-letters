@@ -10,12 +10,12 @@
       :class=`{
         "cell--today": day.get("date") === today.get("date")
       }`
-      @input='$store.commit("main/updateText", {$event, day})'
-      @keydown='$store.commit("main/deleteText", {$event, day})'
+      @input='$store.commit("schedules/updateText", {$event, day})'
+      @keydown='$store.commit("schedules/deleteText", {$event, day})'
     )
     part-of-string(
-      v-if='$store.getters["main/schedulesDict"][day.format("l")]'
-      v-for='(string, i) in $store.getters["main/schedulesDict"][day.format("l")]'
+      v-if='$store.getters["schedules/schedulesDict"][day.format("l")]'
+      v-for='(string, i) in $store.getters["schedules/schedulesDict"][day.format("l")]'
       :key='"string" + day.format("l") + i'
       :string='string'
     )
