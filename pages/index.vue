@@ -6,13 +6,13 @@
         empty-date-box(
           v-if='$store.getters["main/dayOfWeek"]'
           v-for='(_, i) in Array($store.getters["main/dayOfWeek"])'
-          :key='"empty-date" + i'
+          :key='`empty-date-${i}`'
         )
         date-box(
           v-for='(day, i) in $store.getters["main/days"]'
-          :key='"date" + i'
+          :key='`date-${i}`'
           :day='day'
-          :today='$store.getters["main/days"]'
+          :today='$store.getters["main/days"][0]'
         )
     div.ad
 </template>
