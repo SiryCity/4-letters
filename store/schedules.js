@@ -12,14 +12,15 @@ export const getters = {
         ... pre || [],
         [cur.day]: cur.text.split('')
       })
-    ,{}),
+    ,{})
+    
 }
 
 export const mutations = {
 
   //テキストに入力があったら書き換える
   updateText(state, {$event, day}){
-
+  
   state.schedules =
   state.schedules.filter(data =>
     data.day !== day.format('l')
@@ -39,7 +40,8 @@ export const mutations = {
   deleteText(state, {$event, day}){
 
     if(
-      $event.keyCode === 32
+      $event.keyCode === 8
+      || $event.keyCode === 32
       || $event.keyCode === 46
     ){
       $event.currentTarget.value = ''

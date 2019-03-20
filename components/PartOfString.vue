@@ -1,6 +1,5 @@
 <template lang="pug">
-  transition(name='fade')
-    div.string {{string}}
+  transition(name='fade'): div.string: div {{string}}
 </template>
 
 <script>
@@ -15,10 +14,12 @@ export default {
 .string
   width 50%
   height 50%
-  line-height calc(var(--calendar-length) / 15)
   font-size calc(var(--calendar-length) / 15)
   font-weight bold
 
+  display flex
+  justify-content center
+  align-items center
   color #333
   position relative
   z-index 2

@@ -26,9 +26,6 @@ export default {
     DateBox,
     EmptyDateBox,
   },
-  created(){
-    this.$store.commit('schedules/refreshSchedulesInitially')
-  }
 }
 </script>
 
