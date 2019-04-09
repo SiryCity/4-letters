@@ -41,7 +41,6 @@
         height 46px
         font-size 23px
         line-height 100%
-        padding-left 20px
         transition-duration .2s
         transition-property color
         &:hover
@@ -52,14 +51,14 @@
       justify-content center
       align-items center
       a
-        width 46px
-        height 46px
+        width 42px
+        height 42px
+        margin-top 8px
         color white
-        font-size 23px
+        font-size 20px
         line-height 100%
-        font-weight bold
         text-decoration none
-        margin-right 20px
+        margin-right 16px
         transition-duration .2s
         transition-property color
         &:hover

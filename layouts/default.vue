@@ -1,18 +1,15 @@
 <template lang='pug'>
   div#root
     header-bar
-    nuxt 
+    nuxt
     footer#footer &copy; 2018 四文字予定
-    menu-s-p
 </template>
 
 <script>
 import HeaderBar from '~/components/HeaderBar.vue'
-import MenuSP from '~/components/MenuSP.vue'
 export default {
   components: {
     HeaderBar,
-    MenuSP,
   },
   mounted(){
     this.$store.commit('main/setStatic100vh')
@@ -33,7 +30,7 @@ html
   -moz-osx-font-smoothing grayscale
   -webkit-font-smoothing antialiased
   box-sizing border-box
-
+  font-weight bold
 *
 *before
 *after

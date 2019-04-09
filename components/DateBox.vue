@@ -46,44 +46,43 @@ export default {
   justify-content flex-start
   align-items flex-start
 
-.cell__textarea
-  width 100%
-  height 100%
-  padding 0
-  border none
-  resize none
-  color transparent
-  outline none
-  font-size 10%
-  background-color #999
-  border-radius 5%
-  cursor pointer
-  overflow hidden
-  position absolute
-  left 0
-  top 0
-  transition-duration .2s
+  .cell__textarea
+    width 100%
+    height 100%
+    padding 0
+    border none
+    resize none
+    color transparent
+    outline none
+    font-size 10%
+    background-color #999
+    border-radius 5%
+    cursor pointer
+    overflow hidden
+    position absolute
+    left 0
+    top 0
+    transition-duration .2s
 
-.cell__textarea:focus
-  background-color mediumaquamarine
+    &:focus
+      background-color mediumaquamarine
 
-.cell__background
-  width 100%
-  height 100%
-  line-height calc(var(--calendar-length) / 8)
-  font-size calc(var(--calendar-length) / 20)
-  color #ddd
-  font-weight bold
-  margin auto
-  position absolute
-  top 0
-  bottom 0
-  z-index 1
-  pointer-events none
+  .cell__background
+    width 100%
+    height 100%
+    line-height calc(var(--calendar-length) / 8)
+    font-size calc(var(--calendar-length) / 20)
+    color #ddd
+    margin auto
+    position absolute
+    top 0
+    bottom 0
+    z-index 1
+    pointer-events none
 
-.cell--today
-  background-color teal
+  .cell--today
+    background-color teal
 
-.cell--next-month
-  margin calc((100% / 7 - 4px) / 3) 2px 2px
+  .cell--next-month
+    margin calc((100% / 7 - 4px) / 3) 2px 2px
 </style>
