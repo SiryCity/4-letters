@@ -3,11 +3,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: '4文字予定',
+    title: '四文字予定',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' },
+      { hid: 'description', name: 'description', content: '「予定は・四文字・要を得て」4文字しか書けない予定表。' },
       { name: "robots", content: "noindex" },
       { name: "robots", content: "nofollow" },
       { name: "robots", content: "noachieve" },
