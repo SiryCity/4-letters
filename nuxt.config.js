@@ -44,8 +44,12 @@ module.exports = {
     { src: "~plugins/persistedstate.js", ssr: false }
   ],
   modules: [
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/dotenv',
   ],
+  env: {
+    FORMS_API: process.env.FORMS_API,
+  },
   manifest: {
     name: '四文字予定',
     lang: 'ja',
