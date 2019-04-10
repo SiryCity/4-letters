@@ -8,6 +8,8 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '「予定は・四文字・要を得て」四文字しか書けない予定表。' },
+      { hid: 'og:title', property: 'og:title', content: '四文字予定' },
+      { hid: 'og:description', property: 'og:description', content: '「予定は・四文字・要を得て」四文字しか書けない予定表。' },
       
       { name: "robots", content: "noindex" },
       { name: "robots", content: "nofollow" },
@@ -48,7 +50,9 @@ module.exports = {
     '@nuxtjs/dotenv',
   ],
   env: {
-    FORMS_API: process.env.FORMS_API,
+    FORMS_API: (process.env.NODE_ENV === 'development')
+    ? process.env.FORMS_API
+    : process.env.FORMS_API,
   },
   manifest: {
     name: '四文字予定',
