@@ -28,7 +28,7 @@
 
 <style lang="stylus" scoped>
 .privacy-policy
-  width 1920px
+  width 600px
   max-width 95%
   min-height calc(var(--static100vh) - 80px)
   display flex

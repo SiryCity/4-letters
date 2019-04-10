@@ -2,7 +2,7 @@
   div#root
     header-bar
     nuxt
-    footer#footer &copy; 2018 四文字予定
+    footer#footer &copy; 2019 四文字予定
 </template>
 
 <script>
