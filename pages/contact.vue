@@ -8,6 +8,7 @@
       marginheight='0',
       marginwidth='0'
     )
+    div.loading loading now ...
 </template>
 
 <script>
@@ -26,4 +27,16 @@ export default {
   display flex
   justify-content center
   align-items center
+  position relative
+  .loading
+    position absolute
+    left 0
+    right 0
+    top calc((var(--static100vh) - 80px) / 2)
+    font-size 22px
+    font-weight bold
+  iframe
+    position relative
+    z-index 1
+
 </style>
