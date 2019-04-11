@@ -7,17 +7,13 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '「予定は・四文字・要を得て」四文字しか書けない予定表。' },
+      { hid: 'description', name: 'description', content: '「予定は・四文字・要を得て」四文字しか書けない超シンプル予定表。' },
       { hid: 'og:title', property: 'og:title', content: '四文字予定' },
-      { hid: 'og:description', property: 'og:description', content: '「予定は・四文字・要を得て」四文字しか書けない予定表。' },
+      { hid: 'og:description', property: 'og:description', content: '「予定は・四文字・要を得て」四文字しか書けない超シンプル予定表。' },
       { hid: 'og:site_name', property: 'og:site_name', content: '四文字予定' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'https://only-four.com' },
       { hid: 'og:image', property: 'og:image', content: '/icon.png'},
-      
-      { name: "robots", content: "noindex" },
-      { name: "robots", content: "nofollow" },
-      { name: "robots", content: "noachieve" },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
