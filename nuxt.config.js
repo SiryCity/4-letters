@@ -48,6 +48,14 @@ module.exports = {
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: (process.env.NODE_ENV === 'development')
+        ? process.env.GA_ID
+        : process.env.GA_ID,
+      }
+    ]
   ],
   env: {
     FORMS_API: (process.env.NODE_ENV === 'development')
