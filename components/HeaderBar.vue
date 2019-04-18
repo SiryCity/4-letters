@@ -51,14 +51,13 @@
       justify-content center
       align-items center
       a
-        width 42px
-        height 42px
-        margin-top 8px
+        width 34px
+        height 34px
+        margin 16px 12px 0 0
         color white
-        font-size 20px
+        font-size 16px
         line-height 100%
         text-decoration none
-        margin-right 16px
         transition-duration .2s
         transition-property color
         &:hover
