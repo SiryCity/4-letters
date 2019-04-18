@@ -1,7 +1,7 @@
 <template lang="pug">
   article.article
     div.img-box
-      img(alt='四文字予定' src='~/assets/favicon.svg')
+      img(alt='プライバシーポリシー' src='~/assets/favicon.svg')
       h2 プライバシーポリシー
       p 個人情報の扱いについて
     h3 予定表の情報について
@@ -37,7 +37,7 @@
   padding 40px 0
   text-align left
   h3
-    margin 45px 0 0 3px
+    margin 45px 0 3px 3px
     border-left 7px solid teal
     padding-left 7px
   p

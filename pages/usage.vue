@@ -41,9 +41,6 @@
       | 予定って十分思い出せない?
       | スケジュール帳にあんまり長文書かなくない?
       | ...と思って作ったアプリです。
-    h3 作者
-    a(href='https://rm-js.com') MIZUTANI Ryuto
-    p 名古屋のWebエンジニア。
 </template>
 
 <style lang="stylus" scoped>
@@ -54,7 +51,7 @@
   padding 40px 0
   text-align left
   h3
-    margin 45px 0 0 3px
+    margin 45px 0 3px 3px
     border-left 7px solid teal
     padding-left 7px
   p

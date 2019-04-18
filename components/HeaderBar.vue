@@ -6,6 +6,7 @@
         
       nav#header__nav
         nuxt-link(to="/usage") 使いかた
+        nuxt-link(to="/author") 制作者　
         nuxt-link(to="/privacy") 個人情報
         nuxt-link(to="/contact") 問い合せ
 

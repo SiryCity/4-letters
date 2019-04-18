@@ -2,14 +2,16 @@
   div#root
     header-bar
     nuxt
-    footer#footer &copy; 2019 四文字予定
+    footer-bar
 </template>
 
 <script>
 import HeaderBar from '~/components/HeaderBar.vue'
+import FooterBar from '~/components/FooterBar.vue'
 export default {
   components: {
     HeaderBar,
+    FooterBar
   },
   mounted(){
     this.$store.commit('main/setStatic100vh')
@@ -54,14 +56,6 @@ body
   flex-direction column
   align-items center
   position relative
-
-#footer
-  width 100%
-  height 20px
-  line-height 20px
-  color #ddd
-  background-color #333
-
 
 </style>
 
