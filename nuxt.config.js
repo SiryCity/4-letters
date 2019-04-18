@@ -45,15 +45,18 @@ module.exports = {
   plugins: [
     { src: "~plugins/persistedstate.js", ssr: false }
   ],
-  modules: [
+  modules: (process.env.NODE_ENV === 'development')
+  ? [
+    '@nuxtjs/pwa',
+    '@nuxtjs/dotenv',
+  ]
+  : [
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     [
       '@nuxtjs/google-analytics',
       {
-        id: (process.env.NODE_ENV === 'development')
-        ? process.env.GA_ID
-        : process.env.GA_ID,
+        id: process.env.GA_ID,
       }
     ]
   ],
@@ -74,5 +77,4 @@ module.exports = {
     background_color: '#333333'
   },
 }
-
 
