@@ -41,7 +41,7 @@ module.exports = {
       }
     },
   },
-  mode: 'spa',
+  mode: 'universal',
   plugins: [
     { src: "~plugins/persistedstate.js", ssr: false }
   ],

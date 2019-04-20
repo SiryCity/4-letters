@@ -1,9 +1,11 @@
 <template lang='pug'>
   div.cell(:class=`{
-      "cell--next-month":
-        day.get("date") <= (6 - $store.getters["main/dayOfEndOfMonth"])
-        && day.get("date") < today.get("date")
-    }`)
+    "cell--next-month":
+      day.get("date") <= (6 - $store.getters["main/dayOfEndOfMonth"])
+      && day.get("date") < today.get("date"),
+
+    "cell--rendering": !$store.state.main.isFinishedRedering,
+  }`)
     div.cell__background {{day.get('date')}}
     textarea.cell__textarea(
       maxlength='4'
@@ -45,6 +47,10 @@ export default {
   flex-wrap wrap
   justify-content flex-start
   align-items flex-start
+  visibility visible
+  opacity 1
+  transition-duration .5s
+  transition-property opacity, visibility
 
   .cell__textarea
     width 100%
@@ -83,6 +89,9 @@ export default {
   .cell--today
     background-color teal
 
-  .cell--next-month
-    margin calc((100% / 7 - 4px) / 3) 2px 2px
+.cell--next-month
+  margin calc((100% / 7 - 4px) / 3) 2px 2px
+.cell--rendering
+  visibility hidden
+  opacity 0
 </style>

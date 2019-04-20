@@ -2,9 +2,8 @@ import moment from 'moment'
 
 export const state = () =>
   ({
-    //schedules: [{day: "1/1/2019", text: ""}],
     schedules: [{day: "1/1/2019", text: ""}],
-    isOpenedMenu: false
+    isFinishedRedering: false 
   })
 
 export const getters = {
@@ -109,7 +108,7 @@ export const mutations = {
 
 
   //カレンダーのリサイズ
-  resizeCalendar(){
+  resizeCalendar(state){
     
     const HEADER_HEIGHT = 80
     const AD_HEIGHT = 80
@@ -124,6 +123,8 @@ export const mutations = {
           600,
       ) + 'px'
     )
+
+    state.isFinishedRedering = true
 
   }
 }
