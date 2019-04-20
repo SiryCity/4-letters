@@ -4,7 +4,7 @@
       img(src='~/assets/icon.svg')
       h2 MIZUTANI Ryuto
       p 名古屋発Webエンジニア
-      img(src='~/assets/photo.svg')
+      img(src='~/assets/icon.svg')
       p
         a(href='https://rm-js.com') 公式サイト
         | で色々公開中:)
