@@ -1,10 +1,11 @@
 <template lang="pug">
-  common-documents(
-    title='四文字予定'
-    subTitle='予定は・四文字・要を得て'
-    :image='favicon'
-    :md='usage'
-  )
+  div(:style='{"display": "flex", "justify-content": "center"}')
+    common-documents(
+      title='四文字予定'
+      subTitle='予定は・四文字・要を得て'
+      :image='favicon'
+      :md='usage'
+    )
 </template>
 
 <script>

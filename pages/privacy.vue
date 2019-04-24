@@ -1,10 +1,11 @@
 <template lang="pug">
-  common-documents(
-    title='プライバシーポリシー'
-    subTitle='個人情報の扱いについて'
-    :image='favicon'
-    :md='privacy'
-  )
+  div(:style='{"display": "flex", "justify-content": "center"}')
+    common-documents(
+      title='プライバシーポリシー'
+      subTitle='個人情報の扱いについて'
+      :image='favicon'
+      :md='privacy'
+    )
 </template>
 
 <script>
