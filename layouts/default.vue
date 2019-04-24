@@ -33,6 +33,7 @@ html
   -webkit-font-smoothing antialiased
   box-sizing border-box
   font-weight bold
+  background-color #333
 *
 *before
 *after

@@ -49,10 +49,12 @@ module.exports = {
   ? [
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
+    '@nuxtjs/markdownit',
   ]
   : [
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
+    '@nuxtjs/markdownit',
     [
       '@nuxtjs/google-analytics',
       {
@@ -64,6 +66,9 @@ module.exports = {
     FORMS_API: (process.env.NODE_ENV === 'development')
     ? process.env.FORMS_API
     : process.env.FORMS_API,
+  },
+  markdownit: {
+    injected: true,
   },
   manifest: {
     name: '四文字予定',

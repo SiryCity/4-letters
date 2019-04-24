@@ -2,7 +2,7 @@
   header#header__wrapper
     div#header
       nuxt-link.header__title(to="/")
-        h1.title__h1(:class='{"title__h1--not-chosen": $nuxt.$route.path !== "/"}' ) 四文字予定　
+        h1.title__h1(:class='{"title__h1--not-chosen": $nuxt.$route.path !== "/"}' @click='$store.commit("main/test")') 四文字予定　
         
       nav.header__nav
         nuxt-link.header__nav__btn(:class='{"header__nav__btn--not-chosen": $nuxt.$route.path !== "/usage"}' to="/usage") 使いかた
