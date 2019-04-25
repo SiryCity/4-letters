@@ -3,7 +3,7 @@
     div.common-documents__heading(:style='{"background-image": `url(${image})`}')
       h2 {{title}}
       p {{subTitle}}
-    div(v-html='md' v-if='md')
+    div.common-documents__body(v-html='md' v-if='md')
     slot
 </template>
 
@@ -16,7 +16,7 @@ export default {
 
 <style lang="stylus" scoped>
 .common-documents
-  width 95%
+  width 95vw
   max-width 540px
   min-height calc(var(--static100vh) - 80px)
   margin 40px auto
@@ -32,7 +32,8 @@ export default {
     line-height 170%
   
   .common-documents__heading
-    width 100vw
+    width 98.5%
+    max-width 540px
     height 120px
     position relative
     background-color #999
@@ -43,8 +44,12 @@ export default {
     flex-direction column
     justify-content center
     align-items center
+    border-radius 10px
+    box-shadow 0 3px 6px #ccc
     h2
     p
       margin 0
       padding 0
+  .common-documents__body
+    width 100%
 </style>
