@@ -65,10 +65,10 @@ module.exports = {
     ]
   ],
   sitemap: {
-    path: 'dist/sitemap.xml',
+    path: 'sitemap.xml',
     hostname: 'https://only-four.com',
     cacheTime: 1000 * 60 * 15,
-    generate: true,
+    generate: false,
   },
   env: {
     FORMS_API: (process.env.NODE_ENV === 'development')
