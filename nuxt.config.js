@@ -65,7 +65,7 @@ module.exports = {
     ]
   ],
   sitemap: {
-    path: '/sitemap.xml',
+    path: 'dist/sitemap.xml',
     hostname: 'https://only-four.com',
     cacheTime: 1000 * 60 * 15,
     generate: true,
