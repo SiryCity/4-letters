@@ -49,11 +49,13 @@ module.exports = {
   ? [
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
+    '@nuxtjs/sitemap',
     '@nuxtjs/markdownit',
   ]
   : [
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
+    '@nuxtjs/sitemap',
     '@nuxtjs/markdownit',
     [
       '@nuxtjs/google-analytics',
@@ -62,6 +64,12 @@ module.exports = {
       }
     ]
   ],
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://only-four.com',
+    cacheTime: 1000 * 60 * 15,
+    generate: true,
+  },
   env: {
     FORMS_API: (process.env.NODE_ENV === 'development')
     ? process.env.FORMS_API
