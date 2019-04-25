@@ -7,6 +7,7 @@
       nav.header__nav
         nuxt-link.header__nav__btn(:class='{"header__nav__btn--not-chosen": $nuxt.$route.path !== "/usage"}' to="/usage") 使いかた
         nuxt-link.header__nav__btn(:class='{"header__nav__btn--not-chosen": $nuxt.$route.path !== "/author"}' to="/author") 制作者　
+        nuxt-link.header__nav__btn(:class='{"header__nav__btn--not-chosen": $nuxt.$route.path !== "/columns"}' to="/columns") 開発秘話
         nuxt-link.header__nav__btn(:class='{"header__nav__btn--not-chosen": $nuxt.$route.path !== "/privacy"}' to="/privacy") 個人情報
         nuxt-link.header__nav__btn(:class='{"header__nav__btn--not-chosen": $nuxt.$route.path !== "/contact"}' to="/contact") 問い合せ
 
@@ -54,9 +55,9 @@
       .header__nav__btn
         width 34px
         height 34px
-        margin 16px 12px 0 0
+        margin 26px 8px 0 0
         color teal
-        font-size 16px
+        font-size 14px
         line-height 100%
         text-decoration none
         transition-duration .2s

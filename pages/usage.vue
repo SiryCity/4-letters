@@ -1,5 +1,5 @@
 <template lang="pug">
-  div(:style='{"display": "flex", "justify-content": "center"}')
+  div
     common-documents(
       title='四文字予定'
       subTitle='予定は・四文字・要を得て'

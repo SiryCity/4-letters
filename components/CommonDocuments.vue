@@ -20,7 +20,7 @@ export default {
   width 95%
   max-width 540px
   min-height calc(var(--static100vh) - 80px)
-  padding 40px 0
+  padding 40px 2.5%
   text-align left
   display flex
   flex-direction column

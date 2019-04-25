@@ -119,8 +119,8 @@ export const mutations = {
         /iPhone|iPod|iPad|Android/i.test(navigator.userAgent)
           ? window.outerHeight + HEADER_HEIGHT + AD_HEIGHT * 2
           : 1920,
-          window.outerWidth * 0.95,
-          600,
+        window.outerWidth * 0.95,
+        600,
       ) + 'px'
     )
 
