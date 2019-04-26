@@ -23,7 +23,7 @@ export default {
   text-align left
   display flex
   flex-direction column
-  align-items center
+  align-items flex-start
   >>> h3
     margin 45px 0 3px 3px
     border-left 7px solid teal
@@ -32,11 +32,12 @@ export default {
     line-height 170%
   
   .common-documents__heading
-    width 98.5%
+    width 100%
     max-width 540px
     height 120px
     position relative
-    background-color #999
+    color #ddd
+    background-color #333
     background-repeat no-repeat
     background-position center center
     background-size cover
@@ -45,7 +46,6 @@ export default {
     justify-content center
     align-items center
     border-radius 10px
-    box-shadow 0 3px 6px #ccc
     h2
     p
       margin 0
