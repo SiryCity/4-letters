@@ -51,14 +51,7 @@ module.exports = {
     '@nuxtjs/dotenv',
     '@nuxtjs/sitemap',
     '@nuxtjs/markdownit',
-    [
-      '@nuxtjs/google-analytics',
-      {
-        id: (process.env.NODE_ENV === 'development')
-        ? process.env.GA_ID
-        : process.env.GA_ID,
-      }
-    ]
+    '@nuxtjs/google-analytics',
   ]
   : [
     '@nuxtjs/pwa',
@@ -66,6 +59,11 @@ module.exports = {
     '@nuxtjs/sitemap',
     '@nuxtjs/markdownit',
   ],
+  googleAnalytics: {
+    id: (process.env.NODE_ENV === 'development')
+    ? process.env.GA_ID
+    : process.env.GA_ID,
+  },
   sitemap: {
     path: 'sitemap.xml',
     hostname: 'https://only-four.com',
