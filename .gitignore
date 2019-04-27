@@ -12,3 +12,7 @@ dist
 
 sw.*
 .env
+
+
+app.yaml
+secret.yaml

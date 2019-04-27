@@ -45,14 +45,8 @@ module.exports = {
   plugins: [
     { src: "~plugins/persistedstate.js", ssr: false }
   ],
-  modules: (process.env.NODE_ENV === 'development')
+  modules: (process.env.NODE_ENV !== 'development')
   ? [
-    '@nuxtjs/pwa',
-    '@nuxtjs/dotenv',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/markdownit',
-  ]
-  : [
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     '@nuxtjs/sitemap',
@@ -60,9 +54,17 @@ module.exports = {
     [
       '@nuxtjs/google-analytics',
       {
-        id: process.env.GA_ID,
+        id: (process.env.NODE_ENV === 'development')
+        ? process.env.GA_ID
+        : process.env.GA_ID,
       }
     ]
+  ]
+  : [
+    '@nuxtjs/pwa',
+    '@nuxtjs/dotenv',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/markdownit',
   ],
   sitemap: {
     path: 'sitemap.xml',
@@ -74,6 +76,9 @@ module.exports = {
     FORMS_API: (process.env.NODE_ENV === 'development')
     ? process.env.FORMS_API
     : process.env.FORMS_API,
+    GA_ID: (process.env.NODE_ENV === 'development')
+    ? process.env.GA_ID
+    : process.env.GA_ID,
   },
   markdownit: {
     injected: true,
