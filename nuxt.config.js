@@ -45,13 +45,21 @@ module.exports = {
   plugins: [
     { src: "~plugins/persistedstate.js", ssr: false }
   ],
-  modules: (process.env.NODE_ENV !== 'development')
+  modules: (process.client)
   ? [
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     '@nuxtjs/sitemap',
     '@nuxtjs/markdownit',
-    '@nuxtjs/google-analytics',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: (process.env.NODE_ENV === 'development')
+        ? process.env.GA_ID
+        : process.env.GA_ID,
+        dev: false,
+      }
+    ]
   ]
   : [
     '@nuxtjs/pwa',
@@ -59,11 +67,6 @@ module.exports = {
     '@nuxtjs/sitemap',
     '@nuxtjs/markdownit',
   ],
-  googleAnalytics: {
-    id: (process.env.NODE_ENV === 'development')
-    ? process.env.GA_ID
-    : process.env.GA_ID,
-  },
   sitemap: {
     path: 'sitemap.xml',
     hostname: 'https://only-four.com',
