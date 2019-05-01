@@ -1,23 +1,27 @@
 <template lang="pug">
   div
     common-documents(
-      title='コラム01'
+      title='コラム1'
       subTitle='コラム'
       :image='favicon'
-      :md='column01'
+      :md='column1'
     )
 </template>
 
 <script>
 import CommonDocuments from '~/components/CommonDocuments'
-import column01 from '~/assets/md/column01.md'
+import column1 from '~/assets/md/column1.md'
 import favicon from '~/assets/favicon.svg'
 export default {
   components:{
     CommonDocuments
   },
+  head: () => 
+    ({
+      title: 'コラム1',
+    }),
   computed:{
-    column01: () => column01,
+    column1: () => column1,
     favicon: () => favicon
   }
 }

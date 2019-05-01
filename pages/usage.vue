@@ -13,6 +13,10 @@ import CommonDocuments from '~/components/CommonDocuments'
 import usage from '~/assets/md/usage.md'
 import favicon from '~/assets/favicon.svg'
 export default {
+  head: () => 
+    ({
+      title: '使い方',
+    }),
   components:{
     CommonDocuments
   },

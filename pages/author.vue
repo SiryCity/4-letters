@@ -13,6 +13,10 @@ import CommonDocuments from '~/components/CommonDocuments'
 import author from '~/assets/md/author.md'
 import favicon from '~/assets/favicon.svg'
 export default {
+  head: () => 
+    ({
+      title: '制作者',
+    }),
   components:{
     CommonDocuments
   },

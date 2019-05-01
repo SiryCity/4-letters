@@ -22,6 +22,11 @@ import DateBox from '~/components/DateBox.vue'
 import EmptyDateBox from '~/components/EmptyDateBox.vue'
 
 export default {
+  head: () => 
+    ({
+      titleTemplate: null,
+      title: '四文字予定',
+    }),
   components: {
     DateBox,
     EmptyDateBox,

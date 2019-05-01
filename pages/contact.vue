@@ -13,6 +13,10 @@
 
 <script>
 export default {
+  head: () => 
+    ({
+      title: 'お問い合わせ',
+    }),
   asyncData: context =>
     ({
       apiKey:`https://docs.google.com/forms/d/e/${context.env.FORMS_API}/viewform?embedded=true`

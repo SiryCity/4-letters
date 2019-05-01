@@ -13,6 +13,10 @@ import CommonDocuments from '~/components/CommonDocuments'
 import privacy from '~/assets/md/privacy.md'
 import favicon from '~/assets/favicon.svg'
 export default {
+  head: () => 
+    ({
+      title: 'プライバシーポリシー',
+    }),
   components:{
     CommonDocuments
   },
