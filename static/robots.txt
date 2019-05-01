@@ -1,1 +1,4 @@
 User-Agent:*
+Disallow:
+
+Sitemap: https://only-four.com/sitemap.xml
