@@ -7,7 +7,7 @@
     )
       p comming soon...
     //-
-      nuxt-link.columns__box(to='./column')
+      nuxt-link.columns__box(to='./columns/column01')
         p 2019-01-01
         h4 test
 </template>
