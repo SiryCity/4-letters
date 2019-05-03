@@ -44,5 +44,5 @@ export default {
   p
     margin 3px 0 8px
   &:hover
-    background-color mediumaquamarine
+    background-color #8ecc9b
 </style>

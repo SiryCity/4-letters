@@ -111,14 +111,15 @@ export const mutations = {
   resizeCalendar(state){
     
     const HEADER_HEIGHT = 80
+    const SNS_HEIGHT = 80
     const AD_HEIGHT = 80
 
     document.documentElement.style.setProperty(
       '--calendar-length',
       Math.min(
-        window.outerHeight + HEADER_HEIGHT + AD_HEIGHT * 2,
+        window.outerHeight - HEADER_HEIGHT - SNS_HEIGHT - AD_HEIGHT,
         window.outerWidth * 0.95,
-        600,
+        580,
       ) + 'px'
     )
 

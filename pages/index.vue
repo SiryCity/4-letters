@@ -1,6 +1,6 @@
 <template lang='pug'>
   main#main
-    div.ad
+    s-n-s-box
     section#calendar__wrapper
       div#calendar
         empty-date-box(
@@ -20,6 +20,7 @@
 <script>
 import DateBox from '~/components/DateBox.vue'
 import EmptyDateBox from '~/components/EmptyDateBox.vue'
+import SNSBox from '~/components/SNSBox.vue'
 
 export default {
   head: () => 
@@ -30,6 +31,7 @@ export default {
   components: {
     DateBox,
     EmptyDateBox,
+    SNSBox,
   },
 }
 </script>
@@ -37,15 +39,15 @@ export default {
 <style lang='stylus' scoped>
 
 #main //ヘッダーとフッター以外の全て
-  width 1920px
-  max-width 95%
+  width 95%
+  max-width 580px
   display flex
   flex-direction column
   align-items center
 
   #calendar__wrapper //カレンダーの部分のラッパー
     width 100%
-    height calc(var(--static100vh) - 80px - 80px - 80px) //1画面分からヘッダーと広告を抜く
+    height calc(var(--static100vh) - 60px - 40px - 80px - 20px) //1画面分からヘッダーと広告を抜く
     min-height var(--calendar-length)
     display flex
     flex-direction column

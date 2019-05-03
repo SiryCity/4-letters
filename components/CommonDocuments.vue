@@ -17,7 +17,7 @@ export default {
 <style lang="stylus" scoped>
 .common-documents
   width 95vw
-  max-width 540px
+  max-width 580px
   min-height calc(var(--static100vh) - 80px)
   margin 40px auto
   text-align left
@@ -33,7 +33,7 @@ export default {
   
   .common-documents__heading
     width 100%
-    max-width 540px
+    max-width 580px
     height 120px
     position relative
     color #ddd
@@ -46,6 +46,7 @@ export default {
     justify-content center
     align-items center
     border-radius 10px
+    padding 0 5px
     h2
     p
       margin 0
