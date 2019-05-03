@@ -7,7 +7,7 @@
       nav.header__nav
         nuxt-link.header__nav__btn(:class='{"header__nav__btn--not-chosen": $nuxt.$route.path !== "/usage"}' to="/usage") 使いかた
         nuxt-link.header__nav__btn(:class='{"header__nav__btn--not-chosen": $nuxt.$route.path !== "/author"}' to="/author") 制作者　
-        nuxt-link.header__nav__btn(:class='{"header__nav__btn--not-chosen": $nuxt.$route.path !== "/columns"}' to="/columns") 開発秘話
+        nuxt-link.header__nav__btn(:class='{"header__nav__btn--not-chosen": $nuxt.$route.path.slice(0, 8) !== "/columns"}' to="/columns") コラム　
         nuxt-link.header__nav__btn(:class='{"header__nav__btn--not-chosen": $nuxt.$route.path !== "/privacy"}' to="/privacy") 個人情報
         nuxt-link.header__nav__btn(:class='{"header__nav__btn--not-chosen": $nuxt.$route.path !== "/contact"}' to="/contact") 問い合せ
 

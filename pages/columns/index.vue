@@ -5,11 +5,9 @@
       subTitle='開発秘話など'
       :image='favicon'
     )
-      p comming soon...
-    //-
       nuxt-link.columns__box(to='./columns/column1')
-        p 2019-01-01
-        h4 test
+        p 2019-05-03
+        h4 カレンダーアプリで考える日本語の性質
 </template>
 
 <script>
@@ -38,9 +36,13 @@ export default {
   text-decoration none
   border-left 7px solid teal
   padding-left 7px
+  transition-duration .2s
+  transition-property background-color
   h4
     font-size 18px
     margin 0 0 3px
   p
     margin 3px 0 8px
+  &:hover
+    background-color mediumaquamarine
 </style>

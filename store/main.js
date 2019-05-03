@@ -116,9 +116,7 @@ export const mutations = {
     document.documentElement.style.setProperty(
       '--calendar-length',
       Math.min(
-        /iPhone|iPod|iPad|Android/i.test(navigator.userAgent)
-          ? window.outerHeight + HEADER_HEIGHT + AD_HEIGHT * 2
-          : 1920,
+        window.outerHeight + HEADER_HEIGHT + AD_HEIGHT * 2,
         window.outerWidth * 0.95,
         600,
       ) + 'px'

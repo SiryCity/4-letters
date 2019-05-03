@@ -28,8 +28,8 @@ export default {
     margin 45px 0 3px 3px
     border-left 7px solid teal
     padding-left 7px
-  p
-    line-height 170%
+  >>> p
+    line-height 180%
   
   .common-documents__heading
     width 100%

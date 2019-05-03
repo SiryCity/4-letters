@@ -46,7 +46,7 @@ export default {
   #calendar__wrapper //カレンダーの部分のラッパー
     width 100%
     height calc(var(--static100vh) - 80px - 80px - 80px) //1画面分からヘッダーと広告を抜く
-    min-height 400px
+    min-height var(--calendar-length)
     display flex
     flex-direction column
     align-items center

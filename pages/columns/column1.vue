@@ -1,11 +1,12 @@
 <template lang="pug">
   div
     common-documents(
-      title='コラム1'
-      subTitle='コラム'
+      title='カレンダーアプリで考える日本語の性質'
+      subTitle='英語との違いや四字熟語など'
       :image='favicon'
       :md='column1'
     )
+      nuxt-link(to='../columns') 一覧にもどる
 </template>
 
 <script>
@@ -18,7 +19,7 @@ export default {
   },
   head: () => 
     ({
-      title: 'コラム1',
+      title: 'コラム-カレンダーアプリで考える日本語の性質',
     }),
   computed:{
     column1: () => column1,
