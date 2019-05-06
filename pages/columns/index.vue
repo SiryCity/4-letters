@@ -8,6 +8,9 @@
       nuxt-link.columns__box(to='./columns/column1')
         p 2019-05-03
         h4 カレンダーアプリで考える日本語の性質
+      nuxt-link.columns__box(to='./columns/column2')
+        p 2019-05-07
+        h4 Webアプリの情報はどう保存されるのか?
 </template>
 
 <script>
