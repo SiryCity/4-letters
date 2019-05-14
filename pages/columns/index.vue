@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     common-documents(
-      title='コラム'
+      title='ミニコラム'
       subTitle='開発秘話など'
       :image='favicon'
     )
@@ -11,6 +11,9 @@
       nuxt-link.columns__box(to='./columns/column2')
         p 2019-05-07
         h4 Webアプリの情報はどう保存されるのか?
+      nuxt-link.columns__box(to='./columns/column3')
+        p 2019-05-12
+        h4 紙に書くのか、スマホに書くのか?
 </template>
 
 <script>
