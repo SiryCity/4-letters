@@ -14,6 +14,9 @@
       nuxt-link.columns__box(to='./columns/column3')
         p 2019-05-12
         h4 紙に書くのか、スマホに書くのか?
+      nuxt-link.columns__box(to='./columns/column4')
+        p 2019-05-21
+        h4 予定は「何日」の「何時」にあるのか
 </template>
 
 <script>
